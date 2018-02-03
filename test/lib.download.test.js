@@ -13,8 +13,9 @@ describe('download script', function() {
       path.join('bin', 'emsdk-portable', 'emscripten', package.emsdk.version, 'emmake'),
       path.join('bin', 'emsdk-portable', 'emscripten', package.emsdk.version, 'emrun')
     ];
-    
+
     rimraf.sync('bin');
+
     download.downloadAndExtract(function() {
       paths.forEach(function(path) {
         assert(fs.existsSync(path));

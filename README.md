@@ -1,8 +1,15 @@
 # emscripten-download
 
-Downloads the Emscripten compiler and exposes `emcc`, `em++`, `emmake` and `emrun` through `node_modules/.bin` so you can use them in your npm scripts, for example.
+Downloads the Emscripten compiler and exposes through `node_modules/.bin`:
 
-**CONFIRMED WORKING ON OSX ONLY, FOR NOW** (PRs welcome)
+- `emcc`
+- `em++`
+- `emmake`
+- `emrun`
+
+**TESTED ON OSX ONLY, FOR NOW**
+
+PRs welcome
 
 ## License
 

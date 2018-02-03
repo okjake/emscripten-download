@@ -10,7 +10,7 @@
   },
   "keywords": ["emcc", "em++", "emmake", "emrun", "emscripten", "webassembly", "wasm"],
   "scripts": {
-    "install": "node ./lib/download && ./bin/emsdk-portable/emsdk install emscripten-1.37.33",
+    "preinstall": "node ./lib/download && ./bin/emsdk-portable/emsdk install sdk-1.37.33-64bit  && ./bin/emsdk-portable/emsdk activate sdk-1.37.33-64bit",
     "test": "mocha"
   },
   "author": "Jake <jakepyne@gmail.com>",
@@ -20,13 +20,13 @@
     "url": "https://github.com/okjake/emscripten-download"
   },
   "dependencies": {
-    "request": "^2.83.0"
+    "gunzip-maybe": "^1.4.1",
+    "request": "^2.83.0",
+    "tar-fs": "^1.16.0"
   },
   "devDependencies": {
     "mocha": "^5.0.0",
-    "gunzip-maybe": "^1.4.1",
-    "rimraf": "^2.6.2",
-    "tar-fs": "^1.16.0"
+    "rimraf": "^2.6.2"
   },
   "emsdk": {
     "url": "https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz",
