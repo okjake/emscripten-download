@@ -7,6 +7,7 @@ const download = require('../lib/download');
 
 describe('download script', function() {
   it('downloads and extracts the sdk correctly', function() {
+    this.timeout(10000);
     const paths = [
       path.join('bin', 'emsdk-portable', 'emscripten', package.emsdk.version, 'emcc'),
       path.join('bin', 'emsdk-portable', 'emscripten', package.emsdk.version, 'em++'),

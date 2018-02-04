@@ -4,8 +4,8 @@ const package = require('../package.json');
 describe('package.json', function() { 
   it('defines scripts.install correctly', function() {
     assert.strictEqual(
-      package.scripts.install,
-      `node ./lib/download && ./bin/emsdk-portable/emsdk install emscripten-${package.emsdk.version}`
+      package.scripts.preinstall,
+      `node ./lib/download && ./bin/emsdk-portable/emsdk install sdk-${package.emsdk.version}-64bit && ./bin/emsdk-portable/emsdk activate sdk-${package.emsdk.version}-64bit`
     );
   });
 
