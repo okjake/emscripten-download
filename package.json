@@ -1,6 +1,6 @@
 {
   "name": "emscripten-download",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows the Emscripten compiler to be bundled as a dependency",
   "bin": {
     "emcc": "./bin/emsdk-portable/emscripten/1.37.33/emcc",
@@ -8,7 +8,15 @@
     "emmake": "./bin/emsdk-portable/emscripten/1.37.33/emmake",
     "emrun": "./bin/emsdk-portable/emscripten/1.37.33/emrun"
   },
-  "keywords": ["emcc", "em++", "emmake", "emrun", "emscripten", "webassembly", "wasm"],
+  "keywords": [
+    "emcc",
+    "em++",
+    "emmake",
+    "emrun",
+    "emscripten",
+    "webassembly",
+    "wasm"
+  ],
   "scripts": {
     "preinstall": "node ./lib/download && ./bin/emsdk-portable/emsdk install sdk-1.37.33-64bit && ./bin/emsdk-portable/emsdk activate sdk-1.37.33-64bit",
     "test": "mocha"
